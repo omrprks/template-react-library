@@ -34,6 +34,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
+    "sb": "npm run storybook",
     "build:storybook": "build-storybook"
   },
   "peerDependencies": {
