@@ -1,10 +1,8 @@
 {
   "include": ["src", "types"],
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "lib": ["dom", "esnext"],
-    "target": "es5",
-    "outDir": "dist",
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
@@ -21,7 +19,6 @@
       "*": ["src/*", "node_modules/*"]
     },
     "jsx": "react",
-    "allowJs": false,
     "esModuleInterop": true
   }
 }

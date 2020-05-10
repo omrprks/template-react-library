@@ -27,7 +27,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   extends: [
-    'airbnb/base',
+    'airbnb',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
@@ -36,8 +36,15 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   rules: {
-    'no-console': [0],
-
+    'react/jsx-filename-extension': ['error', {
+      'extensions': [
+        '.js',
+        '.jsx',
+        '.ts',
+        '.tsx',
+      ],
+    }],
+    'react/prop-types': [0],
     'import/no-extraneous-dependencies': ['error', {
       devDependencies: ["src/**/*.test.ts", "src/**/*.test.tsx"],
     }],
