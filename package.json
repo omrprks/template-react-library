@@ -1,6 +1,6 @@
 {
   "name": "@omrprks/template-react-library",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "description": "Template containing commonly used config and package dependencies for quickstarting React libraries",
   "repository": "github:omrprks/template-react-library.git",
@@ -10,7 +10,7 @@
   "homepage": "https://github.com/omrprks/template-react-library#readme",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/index.esm.js",
+  "module": "dist/template-react-library.esm.js",
   "files": [
     "dist",
     "src"
