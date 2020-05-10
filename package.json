@@ -1,6 +1,6 @@
 {
   "name": "@omrprks/template-react-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Template containing commonly used config and package dependencies for quickstarting React libraries",
   "repository": "github:omrprks/template-react-library.git",
