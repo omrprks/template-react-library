@@ -1,32 +1,67 @@
 {
-  "name": "@omrprks/template-node",
-  "version": "1.0.0",
+  "name": "@omrprks/template-react-library",
+  "version": "0.1.0",
   "private": false,
-  "description": "Template containing commonly used config and package dependencies for project quickstarts",
-  "repository": "github:omrprks/template-node.git",
+  "description": "Template containing commonly used config and package dependencies for quickstarting React libraries",
+  "repository": "github:omrprks/template-react-library.git",
   "author": "Omar Parkes <omr.prks@gmail.com> (https://github.com/omrprks)",
   "license": "MIT",
-  "bugs": "https://github.com/omrprks/template-node/issues",
-  "homepage": "https://github.com/omrprks/template-node#readme",
+  "bugs": "https://github.com/omrprks/template-react-library/issues",
+  "homepage": "https://github.com/omrprks/template-react-library#readme",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "keywords": [
     "node",
+    "react",
+    "storybook",
     "template"
   ],
   "scripts": {
     "commit": "git-cz",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
-    "build": "cross-env NODE_ENV=production tsc",
     "dev": "ts-node-dev src/index.ts",
-    "lint": "eslint --ext .ts,.tsx src",
+    "start": "tsdx watch",
+    "build": "cross-env NODE_ENV=production tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx src",
     "lint:fix": "npm run lint -- --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "tsdx build",
+    "storybook": "start-storybook -p 6006",
+    "build:storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
+    "babel-loader": "^8.1.0",
     "commitizen": "^4.1.2",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.2.0",
@@ -38,7 +73,14 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
+    "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "ts-loader": "^7.0.3",
     "ts-node-dev": "^1.0.0-pre.44",
+    "tsdx": "^0.13.2",
+    "tslib": "^1.11.2",
     "typescript": "^3.8.3"
   }
 }
