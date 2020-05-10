@@ -36,6 +36,15 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   rules: {
+    'react/jsx-filename-extension': ['error', {
+      'extensions': [
+        '.js',
+        '.jsx',
+        '.ts',
+        '.tsx',
+      ],
+    }],
+    'react/prop-types': [0],
     'import/no-extraneous-dependencies': ['error', {
       devDependencies: ["src/**/*.test.ts", "src/**/*.test.tsx"],
     }],
