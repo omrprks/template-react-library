@@ -3,6 +3,7 @@ import { App } from '.';
 
 export default {
   title: 'App',
+  includeStories: ['Default'],
 };
 
 export const innerText = 'Hello World!';
