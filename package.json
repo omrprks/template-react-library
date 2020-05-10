@@ -26,7 +26,6 @@
   ],
   "scripts": {
     "commit": "git-cz",
-    "dev": "ts-node-dev src/index.ts",
     "start": "tsdx watch",
     "build": "cross-env NODE_ENV=production tsdx build",
     "test": "tsdx test --passWithNoTests",
@@ -80,7 +79,6 @@
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "ts-loader": "^7.0.3",
-    "ts-node-dev": "^1.0.0-pre.44",
     "tsdx": "^0.13.2",
     "tslib": "^1.11.2",
     "typescript": "^3.8.3"
